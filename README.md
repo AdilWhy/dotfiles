@@ -30,12 +30,6 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 sed -i 's/plugins=(git)/plugins=(git fzf-tab zsh-autosuggestions fast-syntax-highlighting)/g' ~/.zshrc
 ```
 
-### Add aliasess to .zshrc
-
-```sh
-echo alias k='kubectl' >> ~/.zshrc
-```
-
 ## 2. Setup podman
 
 Link to [repo](https://github.com/containers/podman)
