@@ -33,7 +33,7 @@ sed -i 's/plugins=(git)/plugins=(git fzf-tab zsh-autosuggestions fast-syntax-hig
 ### Add aliasess to .zshrc
 
 ```sh
-alias k='kubectl'
+echo alias k='kubectl' >> ~/.zshrc
 ```
 
 ## 2. Setup podman
