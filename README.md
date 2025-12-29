@@ -89,9 +89,10 @@ Haven't tested
 sudo apt install bat fd-find ripgrep tldr zoxide eza
 ```
 
-### Setup aliases
+### Setup aliases and configure zoxide
 
 ```sh
+cat <<EOF >> ~/.zshrc
 alias cat='bat --paging=never'
 alias f='fd'
 alias grep='ripgrep'
@@ -102,4 +103,6 @@ alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
+eval "$(zoxide init zsh)"
+EOF
 ```
