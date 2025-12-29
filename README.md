@@ -95,7 +95,7 @@ sudo apt install bat fd-find ripgrep tldr zoxide eza
 cat <<EOF >> ~/.zshrc
 alias cat='bat --paging=never'
 alias f='fd'
-alias grep='ripgrep'
+alias grep='rg'
 alias help='tldr'
 alias cd='z'
 alias zz='zi'
