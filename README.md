@@ -70,12 +70,36 @@ echo "alias lzd='DOCKER_HOST=unix:///run/user/1000/podman/podman.sock lazydocker
 yay -s kubectl k9s
 ```
 
-### Add aliases
+### Add aliases, autocompletion and etc. with kubectl plugin
 
 ```sh
-echo "alias k='kubectl'" >> ~/.zshrc
-echo "alias kgp='kubectl get pods'" >> ~/.zshrc
-echo "alias kga='kubectl get all'" >> ~/.zshrc
-echo "alias kl='kubectl logs -f'" >> ~/.zshrc
-echo "alias kd='kubectl describe'" >> ~/.zshrc
+sed -i 's/plugins=(/&kubectl /' ~/.zshrc
+```
+
+## 5. Install modern UNIX stack
+
+### Installation 
+
+```sh
+sudo pacman -S bat fd ripgrep tldr zoxide eza
+```
+
+Haven't tested
+```sh
+sudo apt install bat fd-find ripgrep tldr zoxide eza
+```
+
+### Setup aliases
+
+```sh
+alias cat='bat --paging=never'
+alias f='fd'
+alias grep='ripgrep'
+alias help='tldr'
+alias cd='z'
+alias zz='zi'
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
 ```
