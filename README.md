@@ -80,13 +80,18 @@ sed -i 's/plugins=(/&kubectl /' ~/.zshrc
 
 ### Installation 
 
+#### Arch Linux 
+
 ```sh
 sudo pacman -S bat fd ripgrep tldr zoxide eza
 ```
 
-Haven't tested
+#### Debian/WSL
+
+`tldr` should be installed from [here](https://github.com/tldr-pages/tlrc/releases/latest)
+
 ```sh
-sudo apt install bat fd-find ripgrep tldr zoxide eza
+sudo apt install bat fd-find ripgrep zoxide eza
 ```
 
 ### Setup aliases and configure zoxide
@@ -105,4 +110,10 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 eval "$(zoxide init zsh)"
 EOF
+```
+
+For Debian/WSL you should add:
+
+```sh
+echo "alias bat='batcat'" >> ~/.zshrc
 ```
