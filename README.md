@@ -27,7 +27,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 ### Add plugins to .zshrc
 
 ```sh
-sed -i 's/plugins=(git)/plugins=(git fzf-tab zsh-autosuggestions fast-syntax-highlighting)/g' ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(git fzf fzf-tab zsh-autosuggestions fast-syntax-highlighting)/g' ~/.zshrc
 ```
 
 ## 2. Setup podman
